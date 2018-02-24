@@ -1,0 +1,57 @@
+<h1>Accordion</h1>
+
+<div>
+  {{#ui-accordion class="styled"}}
+    <div class="title">
+      Semantic UI
+    </div>
+    <div class="content">
+      Checkboxes
+    </div>
+    <div class="title">
+      Accordion Two
+    </div>
+    <div class="content">
+      Content Two
+    </div>
+  {{/ui-accordion}}
+</div>
+
+<h1>Checkboxes</h1>
+{{ui-checkbox label="Click Me" checked=checked onChange=(action (mut checked))}}
+<br>
+<br>
+{{ui-checkbox class="toggle" label="Check Me" checked=pre_checked onChange=(action (mut pre_checked))}}
+
+<h1>Tooltips</h1>
+{{ui-popup tagName="i" class="info icon" content="The text you'd like to show"}}
+{{#ui-popup html='<div class="ui red segment"> <div class="ui button">A button!</div> </div>'}}
+  <div class="ui label">Html Popup</div>
+{{/ui-popup}}
+
+<h1>Progress</h1>
+{{#ui-progress percent=progressOne class="teal indicating"}}
+  <div class="bar"></div>
+  <div class="label">Completed {{input value=progressOne type="range" min=0 max=100}}</div>
+{{/ui-progress}}
+
+<h1>Rating</h1>
+{{ui-rating
+  class="heart"
+  rating=heartRating
+  onRate=(action (mut heartRating))
+  clearable=true}} - Rating {{heartRating}}
+
+<h1>Embed</h1>
+
+{{ui-embed source="youtube" id="smvQkSgPqpA"
+           data-placeholder="http://semantic-ui.com/images/image-16by9.png"}}
+
+<br>
+
+{{#ui-nag class="inline cookie"}}
+  <span class="title">
+    We use cookies to ensure you get the best experience on our website
+  </span>
+  <i class="close icon"></i>
+{{/ui-nag}}

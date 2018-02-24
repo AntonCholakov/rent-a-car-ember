@@ -1,0 +1,9 @@
+{{#list-filter
+   filter=(action 'filterByCity')
+   as |filteredResults|}}
+  <ul class="results">
+    {{#each filteredResults as |carUnit|}}
+      <li>{{car-listing car=carUnit}}</li>
+    {{/each}}
+  </ul>
+{{/list-filter}}

@@ -1,0 +1,6 @@
+{
+  "name": "rent-a-car",
+  "dependencies": {
+    "semantic-ui": "^2.2.14"
+  }
+}

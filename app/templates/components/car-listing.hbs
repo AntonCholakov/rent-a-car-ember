@@ -1,0 +1,19 @@
+<article class="listing">
+  <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+    <img src="{{car.image}}" alt="">
+    <small>View Larger</small>
+  </a>
+  <h3>{{link-to car.title "cars.show" car}}</h3>
+  <div class="detail owner">
+    <span>Owner:</span> {{car.owner}}
+  </div>
+  <div class="detail type">
+    <span>Type:</span> {{car.category}}
+  </div>
+  <div class="detail location">
+    <span>Location:</span> {{car.city}}
+  </div>
+  <div class="detail doors">
+    <span>Number of doors:</span> {{car.doors}}
+  </div>
+</article>
